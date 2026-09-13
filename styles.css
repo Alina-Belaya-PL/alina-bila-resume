@@ -1,0 +1,136 @@
+@import url("base.css");
+
+#recommendations { background: #eaf6fb; }
+.booking { background: #fff; }
+
+/* Full-width brand palette: teal → blue → periwinkle. */
+main, footer { max-width: none; }
+.about { background: #f4fbff; }
+.proof { background: #eaf7ff; }
+.proof-copy { background: linear-gradient(120deg, #115fa8, #667cf2); }
+#experience { background: linear-gradient(135deg, #0d4f98, #416ed0); }
+#experience header { background: rgba(8, 45, 106, .34); }
+#experience .role { background: rgba(8, 39, 92, .34); border-color: rgba(197, 234, 255, .28); }
+#experience .role.current { background: linear-gradient(120deg, rgba(14, 115, 161, .88), rgba(87, 104, 213, .9)); }
+.capabilities { background: #dff7fc; }
+.expertise { background: #f4f7ff; }
+#recommendations { background: #e7edff; }
+.quotes figure { border-color: #c6d5ff; }
+.booking { background: #dff4ff; }
+.contact { background: linear-gradient(120deg, #0aaeca, #6279ef); }
+footer { background: #eef8ff; }
+
+/* Requested section colors and a card-deck experience timeline. */
+.proof { background: #7084f0; }
+.proof-copy { background: #7084f0; }
+.booking { background: #fafafa; }
+#experience { background: #5496e4; position: relative; min-height: 1060px; overflow: hidden; padding-bottom: 40px; }
+#experience header { background: transparent; }
+#experience .role { position: absolute; top: 245px; left: 5.5vw; right: 5.5vw; margin: 0; min-height: 710px; background: #f5fbff; color: #12264c; border: 0; box-shadow: 0 28px 70px rgba(17, 57, 117, .25); animation: card-swipe 15s cubic-bezier(.65,0,.35,1) infinite; }
+#experience .role.current { background: #f5fbff; }
+#experience .role:nth-of-type(2) { animation-delay: -5s; }
+#experience .role:nth-of-type(3) { animation-delay: -10s; }
+#experience .role .company, #experience .role h3 { color: #12264c; }
+#experience .role .company a { color: #145fae; }
+#experience .role li { color: #294466; border-color: #d3e2f0; }
+#experience .role strong { color: #166fae; }
+#experience .role aside, #experience .role .company span { color: #69809f; }
+#experience:hover .role { animation-play-state: paused; }
+#experience .team-photo { max-height: 180px; }
+@keyframes card-swipe { 0%,25% { opacity: 1; transform: translateX(0) rotate(0); z-index: 3; } 31% { opacity: 0; transform: translateX(120%) rotate(8deg); z-index: 3; } 32%,92% { opacity: 0; transform: translateX(-95%) rotate(-5deg); z-index: 1; } 100% { opacity: 1; transform: translateX(0) rotate(0); z-index: 3; } }
+@media(max-width:720px) { #experience { min-height: 1120px; } #experience .role { top: 210px; left: 14px; right: 14px; min-height: 810px; } #experience .team-photo { max-height: 130px; } }
+
+/* Timeline treatment replaces the card-deck interaction. */
+.proof, .proof-copy { background: #7084f0; }
+#experience { min-height: auto; padding: 0 0 72px; }
+#experience:after { content: ""; position: absolute; width: 2px; top: 232px; bottom: 76px; left: 28.1%; background: linear-gradient(#dff8ff, rgba(223,248,255,.25)); }
+#experience .role { display: block; position: relative; top: auto; left: auto; right: auto; min-height: 0; margin: 0 5.5vw 16px; padding: 38px 3.1vw 52px 18.5%; background: #f5fbff; color: #12264c; border: 0; box-shadow: 0 16px 35px rgba(17,57,117,.18); animation: timeline-in .75s cubic-bezier(.2,.8,.2,1) both; }
+#experience .role.current { background: #f5fbff; }
+#experience .role:nth-of-type(2) { animation-delay: .18s; }
+#experience .role:nth-of-type(3) { animation-delay: .36s; }
+#experience .role:before { content: ""; position: absolute; width: 18px; height: 18px; left: 19.6%; top: 47px; border-radius: 50%; background: #5496e4; border: 4px solid #f5fbff; box-shadow: 0 0 0 3px #dff8ff; transform: translateX(-50%); }
+#experience .role aside { position: absolute; left: 0; width: 16%; top: 43px; color: #386a9c; }
+#experience .role .company, #experience .role h3 { color: #12264c; }
+#experience .role .company a { color: #145fae; }
+#experience .role li { color: #294466; border-color: #d3e2f0; }
+#experience .role strong { color: #166fae; }
+#experience:hover .role { animation-play-state: running; }
+@keyframes timeline-in { from { opacity: 0; transform: translateY(38px); } to { opacity: 1; transform: none; } }
+@media(max-width:720px) { #experience { min-height: auto; } #experience:after { left: 38px; top: 215px; } #experience .role { left: auto; right: auto; min-height: 0; margin: 0 14px 14px; padding: 30px 22px 42px 58px; } #experience .role:before { left: 23px; top: 34px; } #experience .role aside { position: static; width: auto; margin-bottom: 22px; display:block; } }
+
+/* Strategy-journey experience blocks. */
+#experience header h2 { max-width: 740px; }
+#experience .role { border-radius: 0 18px 18px 18px; padding-top: 44px; }
+#experience .role aside:before { display: block; margin-bottom: 9px; font: 700 10px 'DM Mono',monospace; letter-spacing: .12em; color: #166fae; }
+#experience .role:nth-of-type(1) aside:before { content: 'STEP 01'; }
+#experience .role:nth-of-type(2) aside:before { content: 'STEP 02'; }
+#experience .role:nth-of-type(3) aside:before { content: 'STEP 03'; }
+#experience .role h3 { font-size: clamp(33px,4vw,58px); }
+#experience .role strong { display: none; }
+#experience .role ul { max-width: 800px; }
+#experience .role li { padding: 15px 0; }
+#experience .role:after { content: '↓'; position: absolute; left: 19.6%; bottom: -37px; transform: translateX(-50%); width: 28px; height: 28px; display: grid; place-items: center; color: #f5fbff; background: #5496e4; border-radius: 50%; z-index: 2; }
+#experience .role:last-child:after { display: none; }
+
+/* Tool wordmarks in capability blocks. */
+.cap-list div:after { display: inline-flex; margin-top: 16px; padding: 7px 9px; border-radius: 5px; background: #fff; color: #336088; font: 700 10px 'DM Mono',monospace; letter-spacing: .02em; white-space: pre-wrap; box-shadow: 0 5px 14px rgba(30,94,140,.08); }
+.cap-list div:nth-child(1):after { content: 'GOOGLE ANALYTICS  •  HOTJAR  •  ahrefs'; }
+.cap-list div:nth-child(2):after { content: 'TABLEAU  •  PYTHON  •  GOOGLE SHEETS  •  APPS SCRIPT'; }
+.cap-list div:nth-child(3):after { content: 'JIRA  •  CONFLUENCE'; }
+.cap-list div:nth-child(4):after { content: 'METRICS  •  KPI  •  ROI'; }
+@media(max-width:720px) { #experience .role:after { left: 23px; } #experience .role h3 { font-size: 32px; } }
+
+/* Repair the timeline alignment. */
+#experience:after { left: calc(5.5vw + 210px); }
+#experience .role { padding-left: 260px; }
+#experience .role:before { left: 210px; }
+#experience .role:after { left: 210px; }
+#experience .role aside { left: 30px; width: 150px; }
+#experience .role h3 { font-size: clamp(32px,3.5vw,50px); max-width: 760px; }
+#experience .role li:has(strong) { display: none; }
+@media(max-width:720px) { #experience:after { left: 38px; } #experience .role { padding-left: 58px; } #experience .role:before,#experience .role:after { left: 23px; } #experience .role aside { width: auto; } }
+
+/* Actual SVG tool logos, served from the Simple Icons library. */
+.cap-list div:after { content: "" !important; width: 240px; height: 38px; padding: 0; background-color: transparent; background-repeat: no-repeat; background-size: 30px 30px; background-position: 0 center; box-shadow: none; }
+.cap-list div:nth-child(1):after { background-image: url('https://cdn.simpleicons.org/googleanalytics/EA4335'),url('https://cdn.simpleicons.org/hotjar/FD3A5C'),url('https://cdn.simpleicons.org/ahrefs/1D6CEB'); background-position: 0 center,52px center,104px center; }
+.cap-list div:nth-child(2):after { width: 300px; background-image: url('https://cdn.simpleicons.org/tableau/E97627'),url('https://cdn.simpleicons.org/python/3776AB'),url('https://cdn.simpleicons.org/googlesheets/34A853'); background-position: 0 center,52px center,104px center; }
+.cap-list div:nth-child(3):after { background-image: url('https://cdn.simpleicons.org/jira/0052CC'),url('https://cdn.simpleicons.org/confluence/172B4D'); background-position: 0 center,52px center; }
+.cap-list div:nth-child(4):after { display:none; }
+
+/* Tactile navigation and CTA behavior. */
+nav a,.intro a,.contact a { transition: transform .2s ease,background .2s ease,color .2s ease,box-shadow .2s ease,opacity .2s ease; }
+nav a:hover { opacity:.72; transform:translateY(-2px); }
+.intro a { display:inline-block; }
+.intro a:hover { background:#fff; color:#1b5caa; padding:10px 14px; box-shadow:0 12px 25px rgba(7,44,111,.2); }
+.intro a:active,.contact a:active { transform:scale(.96); box-shadow:none; }
+.contact a { display:inline-flex; align-items:center; gap:7px; border-radius:999px; font-weight:700; }
+.contact a:hover { transform:translateY(-4px); background:#fff; color:#2853a8; box-shadow:0 14px 28px rgba(12,38,98,.25); }
+
+/* Visual naming and requested accents. */
+nav a:nth-child(2) { font-size: 0; }
+nav a:nth-child(2):after { content: 'Approach'; font-size: 13px; }
+#capabilities .label { font-size: 0; }
+#capabilities .label:after { content: '03 / APPROACH'; font: 400 11px 'DM Mono',monospace; letter-spacing: .04em; }
+.cap-list div:nth-child(2):after { width: 300px; background-image: url('https://cdn.simpleicons.org/tableau/E97627'),url('https://cdn.simpleicons.org/python/3776AB'),url('https://cdn.simpleicons.org/googlesheets/34A853'); }
+.cap-list div:nth-child(3):after { width: 215px; background-image: url('https://cdn.simpleicons.org/jira/0052CC'),url('https://cdn.simpleicons.org/confluence/172B4D'); background-position:0 center,52px center; }
+.cap-list div:nth-child(3):before { content:'AGILE\A ALLIANCE'; white-space:pre; display:inline-grid; place-items:center; width:64px; height:38px; margin:16px 0 0 116px; border-radius:50%; background:#f36c21; color:#fff; font:700 7px/1 'DM Mono',monospace; letter-spacing:.04em; text-align:center; vertical-align:top; }
+.cap-list div:nth-child(4):before { content:'6σ'; display:inline-grid; place-items:center; width:38px; height:38px; margin-top:16px; border:3px solid #1a80a7; border-radius:50%; color:#1a80a7; font:800 20px Georgia,serif; }
+.cap-list div:nth-child(4):after { display:inline-flex; width:auto; height:38px; align-items:center; margin:16px 0 0 9px; color:#1a80a7; background:transparent; font:700 10px 'DM Mono',monospace; box-shadow:none; content:'SIX SIGMA\A MOTOROLA · 1986' !important; white-space:pre; }
+#experience header .label { color:#fff !important; display:inline-block; padding:8px 11px; border:1px solid rgba(255,255,255,.65); border-radius:99px; background:rgba(255,255,255,.12); }
+#experience:after { width:5px; background:linear-gradient(#fff,#8bf0ff,#fff); box-shadow:0 0 18px rgba(139,240,255,.9); border-radius:9px; }
+#experience .role:before { width:23px; height:23px; background:#fff; border-color:#5496e4; box-shadow:0 0 0 5px rgba(139,240,255,.52),0 0 20px rgba(139,240,255,.9); }
+
+/* Final visual refinements. */
+.proof, .proof-copy { background: #7084f0; }
+#experience header div > p { color: #fff !important; }
+#experience:after { width: 4px; background: #12264c; box-shadow: none; }
+#experience .role:before { display: none; }
+#experience .role:after { background: #12264c; }
+#experience .team-photo { height: 155px; max-height: 155px; object-position: center top; }
+.cap-list div:nth-child(3):before, .cap-list div:nth-child(4):before, .cap-list div:nth-child(4):after { display: none; }
+
+/* Clean section label and timeline markers. */
+#experience header .label { display: block; justify-self: start; align-self: start; width: auto; padding: 0; border: 0; border-radius: 0; background: transparent; }
+#experience:after { background: #7084f0; }
+#experience .role:after { background: #7084f0; }
+#experience .role aside:before { display: none; }
