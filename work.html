@@ -242,6 +242,13 @@ main { max-width: 1320px; padding: 0 5.5vw 80px; margin: 0 auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
 
+
+.competency-head, .competency-row { display: grid; grid-template-columns: .85fr repeat(3,minmax(0,1fr)); gap: 10px; align-items: start; }
+.competency-head { padding: 16px 10px 9px; border-bottom: 1px solid #dbe2f0; color: #8492ad; font: 8px var(--work-mono); letter-spacing: .08em; }
+.competency-head span:not(:first-child) { color: #4f68d7; }
+.competency-row { padding: 12px 10px; border-bottom: 1px solid #e5e9f2; color: #627598; font-size: 9px; line-height: 1.5; }
+.competency-row strong { color: #304a77; font-size: 9px; }
+@media (max-width: 560px) { .competency-head, .competency-row { grid-template-columns: .72fr repeat(3,minmax(0,1fr)); gap: 5px; padding-right: 4px; padding-left: 4px; } .competency-head { font-size: 7px; } .competency-row, .competency-row strong { font-size: 7px; } }
   </style>
   <title>Selected Work — Alina Bila</title>
 </head>
@@ -265,7 +272,7 @@ main { max-width: 1320px; padding: 0 5.5vw 80px; margin: 0 auto; }
 
   <main id="work">
     <section class="intro-row" aria-labelledby="work-heading">
-      <p class="section-kicker">WORK SAMPLES / 04</p>
+      <p class="section-kicker">WORK SAMPLES / 05</p>
       <div><h2 id="work-heading">From messy inputs<br>to clearer decisions.</h2><p>These examples are adapted from real work. Company identifiers and operational records are removed. Every number and record inside the interface demos is synthetic unless called out as a resume outcome.</p></div>
     </section>
 
@@ -274,6 +281,7 @@ main { max-width: 1320px; padding: 0 5.5vw 80px; margin: 0 auto; }
       <a href="#prioritization"><span>02</span>Prioritization model</a>
       <a href="#knowledge-system"><span>03</span>Research knowledge system</a>
       <a href="#product-concepts"><span>04</span>Product concepts</a>
+      <a href="#career-framework"><span>05</span>Career framework</a>
     </nav>
 
     <article class="case-study" id="experiment-ops">
@@ -390,6 +398,30 @@ main { max-width: 1320px; padding: 0 5.5vw 80px; margin: 0 auto; }
           <div class="targeting-row"><div><span>TARGETING RULE</span><strong>New visitors · sample segment</strong></div><span class="demo-chip">CONTROL / VARIANT</span></div>
           <div class="flag-checks"><span><i>✓</i> Owner visible</span><span><i>✓</i> Change history</span><span><i>✓</i> Experiment linked</span></div>
           <p class="demo-footnote">Fictional flag and rollout values for demonstration.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="case-study" id="career-framework">
+      <header class="case-heading">
+        <div><p class="case-number">CASE / 05 <span>TEAM ENABLEMENT</span></p><h2>Make career expectations<br>easier to act on.</h2></div>
+        <p class="case-lede">I helped organize a level-based capability framework so teammates and leads could discuss role expectations with shared, observable examples.</p>
+      </header>
+      <div class="case-layout">
+        <div class="case-story">
+          <dl class="case-facts"><div><dt>Role</dt><dd>Growth team enablement</dd></div><div><dt>Focus</dt><dd>Product capability · career growth</dd></div><div><dt>Work</dt><dd>Level rubric · calibration worksheet</dd></div></dl>
+          <div class="story-block"><h3>The challenge</h3><p>Career conversations are difficult when levels are described in broad terms. People need concrete examples of how scope, judgment, and collaboration grow over time.</p></div>
+          <div class="story-block"><h3>What I structured</h3><ul><li>Capability areas that connect product understanding, customer context, metrics, and technical collaboration.</li><li>Observable examples that distinguish junior, middle, and senior scope.</li><li>A calibration worksheet that makes strengths and development areas easier to discuss.</li></ul></div>
+          <div class="story-block stage-note"><h3>Sample status</h3><p>The matrix below uses fictional examples. It contains no employee assessments, names, or real ratings.</p></div>
+        </div>
+        <div class="demo-panel competency-demo" aria-label="Synthetic product capability matrix">
+          <div class="demo-topline"><span>PRODUCT CAPABILITY / LEVEL GUIDE</span><span class="demo-badge"><i></i> SYNTHETIC EXAMPLE</span></div>
+          <div class="competency-head"><span>CAPABILITY</span><span>JUNIOR</span><span>MIDDLE</span><span>SENIOR</span></div>
+          <div class="competency-row"><strong>Product value</strong><span>Explains the purpose of core features.</span><span>Connects features to user needs and outcomes.</span><span>Anticipates segment needs and shapes product direction.</span></div>
+          <div class="competency-row"><strong>Metrics &amp; learning</strong><span>Uses agreed KPIs and existing reports.</span><span>Tracks KPI movement and investigates changes.</span><span>Defines strategic measures and improves how teams learn.</span></div>
+          <div class="competency-row"><strong>Delivery context</strong><span>Uses team tools and understands common terms.</span><span>Coordinates dependencies and reads basic product flows.</span><span>Surfaces integration risks and aligns teams on trade-offs.</span></div>
+          <div class="competency-row"><strong>Collaboration</strong><span>Asks for context and shares progress.</span><span>Aligns partners around scope, owners, and timing.</span><span>Creates clarity across teams when goals or constraints conflict.</span></div>
+          <p class="demo-footnote">Illustrative behaviors only · no actual performance ratings.</p>
         </div>
       </div>
     </article>
