@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alina-bila-resume-production.up.railway.app/sitemap.xml
