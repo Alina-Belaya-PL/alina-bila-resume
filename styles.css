@@ -1169,3 +1169,8 @@ body .label { display: none !important; }
 @media (max-width: 720px) {
   #capabilities .rhythm-tools ul.logo-sequence li { flex-basis: 132px; }
 }
+
+
+/* Experience cards distinguish what Alina owned from the results. */
+#experience .card-section-label { margin: 0 0 6px; color: #8294be; font: 9px/1.35 'DM Mono', monospace; letter-spacing: .08em; text-transform: uppercase; }
+#experience .expanded-outcomes .card-section-label { margin-top: 16px; }
